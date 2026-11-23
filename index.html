@@ -2927,7 +2927,7 @@ function irEquipPendente() {
 /* página pública aberta pelo QR (sem login) */
 function renderPublico() {
   const p = S.pubEquip, app = $('#app');
-  const topo = `<div class="pub-h"><img class="logo" src="${LOGO}" alt="Dome"><div><b>PMOC – Ar-condicionado</b><div class="small muted">${esc(S.pmoc.contratante || 'Dome Serviços Integrados')}</div></div></div>`;
+  const topo = `<div class="pub-h"><picture><source srcset="${LOGO_NEG}" media="(prefers-color-scheme: dark)"><img class="logo" src="${LOGO}" alt="Dome"></picture><div><b>PMOC – Ar-condicionado</b><div class="small muted">${esc(S.pmoc.contratante || 'Dome Serviços Integrados')}</div></div></div>`;
   if (p.carregando) { app.innerHTML = `<div class="pub">${topo}<p class="muted">Carregando o equipamento ${esc(p.id)}…</p></div>`; return; }
   if (p.erro || !p.e) { app.innerHTML = `<div class="pub">${topo}<p class="banner">${esc(p.erro || 'Equipamento ' + p.id + ' não encontrado.')}</p><a class="btn" href="${esc(location.pathname)}">Ir para o app</a></div>`; return; }
   const e = p.e, sit = situacaoEquip(e, p.regs);
@@ -3339,7 +3339,7 @@ function csvBeb() {
 /* ---------- QR: página pública e volta depois do login ---------- */
 function renderPubBeb() {
   const p = S.pubBeb, app = $('#app');
-  const topo = `<div class="pub-h"><img class="logo" src="${LOGO}" alt="Dome"><div><b>Limpeza de bebedouro</b><div class="small muted">Manutenção Predial · Dome Serviços Integrados</div></div></div>`;
+  const topo = `<div class="pub-h"><picture><source srcset="${LOGO_NEG}" media="(prefers-color-scheme: dark)"><img class="logo" src="${LOGO}" alt="Dome"></picture><div><b>Limpeza de bebedouro</b><div class="small muted">Manutenção Predial · Dome Serviços Integrados</div></div></div>`;
   if (p.carregando) { app.innerHTML = `<div class="pub">${topo}<p class="muted">Carregando o bebedouro ${esc(p.id)}…</p></div>`; return; }
   if (p.erro || !p.b) { app.innerHTML = `<div class="pub">${topo}<p class="banner">${esc(p.erro || 'Bebedouro ' + p.id + ' não encontrado.')}</p><a class="btn" href="${esc(location.pathname)}">Ir para o app</a></div>`; return; }
   const b = p.b, s = bebSituacao(b, p.regs);
