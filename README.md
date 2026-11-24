@@ -1,5 +1,3 @@
-# Manutenção Predial Dome
+# Endereço antigo
 
-Site publicado pelo GitHub Pages: https://jguilhermerangel1984-netizen.github.io/manutencao-dome/
-
-O código-fonte fica no repositório privado `manutencao-predial-dome`. Este repositório guarda só o site pronto.
+O site mudou para https://dome-manutencao.github.io/ — esta página só redireciona.
